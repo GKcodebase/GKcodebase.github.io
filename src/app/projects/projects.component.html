@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <h1 class="light-blue-text text-darken-3 animate__animated animate__bounceInLeft">
+      <b>Projects and Blogs</b>
+    </h1>
+  </div>
+  <div *ngIf="githubProjects.length > 0" id="starred-projects" class="row">
+    <a
+      *ngFor="let project of githubProjects; let i = index"
+      class="card animate__animated animate__zoomIn animate__faster col s10 offset-s1 m5 l5"
+      [ngClass]="{ 'offset-l2': i % 2 !== 0, 'offset-m2': i % 2 !== 0 }"
+      href="{{ project.html_url }}"
+      target="_blank"
+    >
+      <div class="card-content light-blue-text text-lighten-5 light-blue darken-3">
+        <span class="card-title">
+          <div class="card-title-content" [ngStyle]="{ 'margin-top': !!!project.language ? '0rem' : '' }">
+            <span *ngIf="project.language" class="badge light-blue lighten-5 light-blue-text text-darken-3">
+              <i class="material-icons tiny">navigate_next</i>{{ project.language }}
+            </span>
+            <h5 class="project-title text-ellipsis">{{ project.name }}</h5>
+          </div>
+        </span>
+        <p class="project-description flow-text">{{ project.description }}.</p>
+      </div>
+    </a>
+
+  </div>
+  <div>
+    <a
+    *ngFor="let blog of blogs; let i = index"
+    class="card animate__animated animate__zoomIn animate__faster col s10 offset-s1 m5 l5"
+    [ngClass]="{ 'offset-l2': i % 2 !== 0, 'offset-m2': i % 2 !== 0 }"
+    href="{{ blog.url }}"
+    target="_blank"
+  >
+    <div class="card-content light-blue-text text-lighten-5 light-blue darken-3">
+      <span class="card-title">
+        <div class="card-title-content" [ngStyle]="{ 'margin-top': !!!blog.type_of? '0rem' : '' }">
+          <span *ngIf="blog.type_of" class="badge light-blue lighten-5 light-blue-text text-darken-3">
+            <i class="material-icons tiny">navigate_next</i>{{ blog.type_of}}
+          </span>
+          <h5 class="project-title text-ellipsis">{{ blog.title }}</h5>
+        </div>
+      </span>
+      <p class="project-description flow-text">{{ blog.description }}.</p>
+    </div>
+  </a>
+
+    <!-- <a href="'.$article['url'].'" class="blog__article">
+      <h2>'.$article['title'].'</h2>
+      <div class="blog__description">'.$article['description'].'</div>
+      <div class="blog__readmore">Read More</div>
+  </a> -->
+  </div>
+  <ng-template #elseBlock>
+    <div class="card-panel animate__animated animate__zoomIn animate__faster">
+      <p class="not-found-title">Projects not found</p>
+    </div>
+  </ng-template>
+</div>

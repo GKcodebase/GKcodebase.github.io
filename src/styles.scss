@@ -1,0 +1,38 @@
+:root {
+  --color-primary: #1f4d49;
+  --color-secondary: #87cdee;
+  --color-tertiary: white;
+  --color-pure-white: white;
+  --color-transparent: transparent;
+}
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: var(--color-secondary);
+}
+body {
+  font-family: 'FontAwesome';
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.card-panel,
+.card,
+.collapsible {
+  box-shadow: none !important;
+}
+.indicator {
+  border-bottom: 5px solid var(--color-primary);
+}
+.light-blue-text.text-darken-3 {
+  color:#1f4d49!important;
+}
+.light-blue.darken-3 {
+  background-color: #1f4d49!important;
+}
