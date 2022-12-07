@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AboutService {
   private works: InfoField[] = [
-    new InfoField('SDE-3 ', 'Walmart labs', 'July 2022 - Present', 'https://www.walmart.com/'),
+    new InfoField('SDE 3 ', 'Walmart labs', 'July 2022 - Present', 'https://www.walmart.com/'),
     new InfoField('Software Engineer 2', 'Thermofisher Scientifice', 'July 2019 - Jul 2022', 'https://www.thermofisher.com/'),
   ];
 
   private education: InfoField[] = [
     new InfoField(
-      'Bachelor of Technology',
+      'Bachelor of Technology , ECE',
       'NIT Calicut',
       'June 2015 - May 2019','http://www.nitc.ac.in/'
     )

@@ -18,12 +18,12 @@
         <div class="col s12 m8 l9 left-align-text">
           <span class="flow-text description-text">
             Software Developer.<br /><br />
-            Currently working as an engineer at Walmart
-            <p>Experience in edge computing, proficiency in java, spring boot, Microservices, AWS, IoT ,Kafka ,Azure Cosmos.
-              Worked on Angular, Electron, Jenkins, Docker, kubernetes, Grafan, Promethus, Jmeter, Spring, OSGi, Google Guice, Node-red and other IoT
+            Currently working as an engineer at Walmart labs
+            <p>Experience in edge computing and distributed computing, proficient in java, spring boot, Microservices, AWS, IoT, Kafka, Azure Cosmos, Splunk, and Kubernetes.
+              Worked on Angular, Electron, Jenkins, Docker, Grafan, Prometheus, Jmeter, Spring, OSGi, Google Guice, Node-red and other IoT
               frameworks and protocols.</p>
-            Tech enthusiast, traveller and foodies.
-          </span>
+              Tech enthusiast, traveller and foodie.
+            </span>
         </div>
       </div>
     </li>
@@ -36,8 +36,9 @@
           <tbody>
             <tr *ngFor="let e of education">
               <td>
-                <a class="light-blue-text text-lighten-5 light-blue darken-3" href="{{ e.href }}" target="_blank">{{
+                <a class="light-blue-text text-lighten-5 light-blue darken-3" href= "{{ e.href }}" target="_blank" >{{
                   e.field_1 }}</a>
+                  <tr>{{e.field_2}}</tr>
               </td>
               <td class="right-align">{{ e.field_3 }}</td>
             </tr>
@@ -63,27 +64,11 @@
         </table>
       </div>
     </li>
-    <!-- <li (click)="onClickToggle($event)">
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-lighten-5 light-blue darken-3">
-        <i class="material-icons">language</i>Spoken languages
-      </div>
-      <div class="collapsible-body light-blue-text text-lighten-5 light-blue darken-3">
-        <table class="flow-text">
-          <tbody>
-            <tr *ngFor="let lang of languages">
-              <td>{{ lang.field_1 }}</td>
-              <td>{{ lang.field_2 }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </li> -->
   </ul>
   <div class="row animate__animated animate__fadeInUp animate__faster animate__delay-1s">
     <div class="card-link col s12 m4 l3 btn-large">
       <a id="downloadButton" class="light-blue-text text-lighten-5 light-blue darken-3 valign-wrapper center"
-        href="assets/GokulG.K-Resume.pdf" target="_blank"
-        download>View C.V.
+        href="assets/GokulG.K-Resume.pdf" target="_blank">View C.V
       </a>
     </div>
   </div>
